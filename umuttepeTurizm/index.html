@@ -29,8 +29,8 @@
 </head>
 
 <body>
-<?php
-$servername = "localhost";
+{% comment %} <?php
+/* $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "umuttepeturizmdb";
@@ -64,8 +64,8 @@ if ($kalkisSehri !== null && $gidisSaati !== null) {
 }
 
 // Bağlantıyı kapat
-$conn->close();
-?>
+$conn->close(); */
+?> {% endcomment %}
 
 
     <div class="tm-main-content" id="top">
@@ -134,7 +134,7 @@ $conn->close();
             <label for="kalkissehri">Kalkış</label>
             <select name="kalkissehri" class="form-control tm-select" id="kalkissehri">
                 <option value="0" selected>Şehir seçiniz</option>
-                <?php
+                {% comment %} <?php
                 // Veritabanından şehir bilgilerini çek
                 $sehirler = mysqli_query($conn, "SELECT * FROM terminals");
 
@@ -142,7 +142,7 @@ $conn->close();
                 while ($sehir = mysqli_fetch_assoc($sehirler)) {
                     echo "<option value='" . $sehir['terminalID'] . "'>" . $sehir['terminalName'] . "</option>";
                 }
-                ?>
+                ?> {% endcomment %}
             </select>
             <i class="fa fa-exchange changeRoute" id="changeCities" aria-hidden="true"></i>
         </div>
@@ -150,15 +150,15 @@ $conn->close();
             <label for="gidisSaati">Gidiş Saati</label>
             <select name="gidisSaati" class="form-control tm-select" id="gidisSaati">
                 <option value="0" selected>Saat seçiniz</option>
-                <?php
+                {% comment %} <?php
                 // Veritabanından saat bilgilerini çek
                 $saatler = mysqli_query($conn, "SELECT * FROM bustrips");
 
                 // Çekilen saat bilgilerini dropdown içine ekle
                 while ($saat = mysqli_fetch_assoc($saatler)) {
-                    echo "<option value='" . $saat['tripID'] . "'>" . $saat['departureTime'] . "</option>";
+                    echo "<option value='" . $saat['tripID'] . ''>" . $saat['departureTime'] . "</option>";
                 }
-                ?>
+                ?> {% endcomment %}
             </select>
         </div>
     </div>
