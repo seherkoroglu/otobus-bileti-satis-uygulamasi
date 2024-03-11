@@ -29,6 +29,45 @@
 </head>
 
 <body>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "umuttepeturizmdb";
+
+// Veritabanı bağlantısını oluştur
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Bağlantıyı kontrol et
+if ($conn->connect_error) {
+    echo("Bağlantı hatası: " . $conn->connect_error);
+} else {
+    echo "Bağlantı başarılı!";
+}
+// Formdan gelen verileri al
+$kalkisSehri = isset($_GET['kalkissehri']) ? $_GET['kalkissehri'] : null;
+$gidisSaati = isset($_GET['gidisSaati']) ? $_GET['gidisSaati'] : null;
+
+// Form verilerinin tanımlı olduğunu kontrol et
+if ($kalkisSehri !== null && $gidisSaati !== null) {
+    // Veritabanına ekleme sorgusu örneği
+    $sql = "INSERT INTO tickets (departureTerminalID, departureTime) VALUES ('$kalkisSehri', '$gidisSaati')";
+
+    // Sorguyu çalıştır
+    if ($conn->query($sql) === TRUE) {
+        echo "Veri başarıyla eklendi";
+    } else {
+        echo "Hata: " . $sql . "<br>" . $conn->error;
+    }
+} else {
+    echo "Form verileri eksik!";
+}
+
+// Bağlantıyı kapat
+$conn->close();
+?>
+
+
     <div class="tm-main-content" id="top">
         <div class="tm-top-bar-bg"></div>
 
@@ -39,7 +78,7 @@
                     <nav class="navbar navbar-expand-lg narbar-light">
                         <a class="navbar-brand mr-auto" href="#">
                             <img src="img/logo.png" alt="Site logo">
-                            UmuttepeTurizm
+                            UMUTTEPE TURİZM
                         </a>
                         <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -88,42 +127,45 @@
                         <!--    BİLET SORGU      -->
                         <div class="row tm-banner-row" id="tm-section-search">
 
-                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
-                                <div class="form-row tm-search-form-row">
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="kalkissehri">Kalkış</label>
-                                        <select name="kalkissehri" class="form-control tm-select" id="kalkissehri">
-                                            <option value="0" selected>Şehir seçiniz</option>
-                                            <option value="1">Şehir1</option>
-                                            <option value="2">Şehir2</option>
-                                        </select>
-                                        <i class="fa fa-exchange changeRoute" id="changeCities" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="varissehri">Varış</label>
-                                        <select name="varissehri" class="form-control tm-select" id="varissehri">
-                                            <option value="0" selected>Şehir seçiniz</option>
-                                            <option value="1">Şehir1</option>
-                                            <option value="2">Şehir2</option>
-                                        </select>
-                                    </div>
-                                </div> <!-- form-row -->
-                                <div class="form-row tm-search-form-row">
+                            <!-- index.html -->
+<form action="veritabani_baglanti.php" method="get" class="tm-search-form tm-section-pad-2">
+    <div class="form-row tm-search-form-row">
+        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+            <label for="kalkissehri">Kalkış</label>
+            <select name="kalkissehri" class="form-control tm-select" id="kalkissehri">
+                <option value="0" selected>Şehir seçiniz</option>
+                <?php
+                // Veritabanından şehir bilgilerini çek
+                $sehirler = mysqli_query($conn, "SELECT * FROM terminals");
 
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-                                        <label for="gidisTarihi">Gidiş Tarihi</label>
-                                        <input name="check-in" type="text" class="form-control" id="gidisTarihi" placeholder="Tarih Seçiniz">
-                                    </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-                                        <label for="donusTarihi">Dönüş Tarihi</label>
-                                        <input name="check-out" type="text" class="form-control" id="donusTarihi" placeholder="Tarih Seçiniz">
-                                    </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="btnSubmit">&nbsp;</label>
-                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Bilet Bul</button>
-                                    </div>
-                                </div>
-                            </form>
+                // Çekilen şehir bilgilerini dropdown içine ekle
+                while ($sehir = mysqli_fetch_assoc($sehirler)) {
+                    echo "<option value='" . $sehir['terminalID'] . "'>" . $sehir['terminalName'] . "</option>";
+                }
+                ?>
+            </select>
+            <i class="fa fa-exchange changeRoute" id="changeCities" aria-hidden="true"></i>
+        </div>
+        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+            <label for="gidisSaati">Gidiş Saati</label>
+            <select name="gidisSaati" class="form-control tm-select" id="gidisSaati">
+                <option value="0" selected>Saat seçiniz</option>
+                <?php
+                // Veritabanından saat bilgilerini çek
+                $saatler = mysqli_query($conn, "SELECT * FROM bustrips");
+
+                // Çekilen saat bilgilerini dropdown içine ekle
+                while ($saat = mysqli_fetch_assoc($saatler)) {
+                    echo "<option value='" . $saat['tripID'] . "'>" . $saat['departureTime'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
+    </div>
+    <!-- Diğer form alanları -->
+    <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Bilet Bul</button>
+</form>
+
 
                         </div> <!-- row -->
 
