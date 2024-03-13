@@ -97,6 +97,12 @@ $conn->close(); */
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tm-section-4">İletişim</a>
                                 </li>
+<<<<<<< HEAD:app/index.php
+=======
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Giriş</a>
+                                </li>
+>>>>>>> b83a173d17c0434fa06d7faf83e976fce2eb4c01:app/index.html
                                 
                                 
                             </ul>
