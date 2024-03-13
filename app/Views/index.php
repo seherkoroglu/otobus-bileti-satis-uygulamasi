@@ -40,7 +40,6 @@
                     <nav class="navbar navbar-expand-lg narbar-light">
                         <a class="navbar-brand mr-auto" href="#">
 
-                            <img src="img/logo.png" alt="Site logo">
 
                             <img src="img/logo.png" alt="Site logo"> Umuttepe
                              Turizm
@@ -71,9 +70,6 @@
 
     <a class="nav-link"  onclick="redirectToLoginPage()">Giriş</a>
 </li>
-
-                                    <a class="nav-link" href="<?php echo base_url('login'); ?>">Giriş</a>
-                                </li>
                             </ul>
                         </div>
                     </nav>
