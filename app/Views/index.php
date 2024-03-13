@@ -29,6 +29,7 @@
 </head>
 
 <body>
+
     <div class="tm-main-content" id="top">
         <div class="tm-top-bar-bg"></div>
 
@@ -39,7 +40,7 @@
                     <nav class="navbar navbar-expand-lg narbar-light">
                         <a class="navbar-brand mr-auto" href="#">
                             <img src="img/logo.png" alt="Site logo">
-                            UmuttepeTurizm
+                             Turizm
                         </a>
                         <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -58,9 +59,17 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tm-section-4">İletişim</a>
                                 </li>
+                                <script>
+    function redirectToLoginPage() {
+        window.location.href="login.php";
+    }
+</script>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/umuttepeTurizm/user/index.html">Giriş</a>
-                                </li>
+    <a class="nav-link"  onclick="redirectToLoginPage()">Giriş</a>
+</li>
+
+                              
+
                             </ul>
                         </div>
                     </nav>
