@@ -98,8 +98,10 @@ $conn->close(); */
                                     <a class="nav-link" href="#tm-section-4">İletişim</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/umuttepeTurizm/user/index.html">Giriş</a>
+                                    <a class="nav-link" href="">Giriş</a>
                                 </li>
+                                
+                                
                             </ul>
                         </div>
                     </nav>
@@ -151,13 +153,13 @@ $conn->close(); */
             <select name="gidisSaati" class="form-control tm-select" id="gidisSaati">
                 <option value="0" selected>Saat seçiniz</option>
                 {% comment %} <?php
-                // Veritabanından saat bilgilerini çek
-                $saatler = mysqli_query($conn, "SELECT * FROM bustrips");
+                // // Veritabanından saat bilgilerini çek
+                // $saatler = mysqli_query($conn, "SELECT * FROM bustrips");
 
-                // Çekilen saat bilgilerini dropdown içine ekle
-                while ($saat = mysqli_fetch_assoc($saatler)) {
-                    echo "<option value='" . $saat['tripID'] . ''>" . $saat['departureTime'] . "</option>";
-                }
+                // // Çekilen saat bilgilerini dropdown içine ekle
+                // while ($saat = mysqli_fetch_assoc($saatler)) {
+                //     echo "<option value='" . $saat['tripID'] . ''>" . $saat['departureTime'] . "</option>";
+                // }
                 ?> {% endcomment %}
             </select>
         </div>
@@ -709,15 +711,15 @@ $conn->close(); */
                     <div class="form-group">
                         <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Send Message Now</button>
+                    <button type="submit" class="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Şimdi Mesaj Gönder</button>
                 </form>
             </div> <!-- .tm-container-outer -->
 
             <footer class="tm-container-outer">
                 <p class="mb-0">
-                    Copyright © <span class="tm-current-year">2018</span> Your Company
+                    Copyright © <span class="tm-current-year">2018</span> Umuttepe Turizm
 
-                    . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Template Mo</a>
+                    . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Umuttepe Turizm</a>
                 </p>
             </footer>
         </div>
