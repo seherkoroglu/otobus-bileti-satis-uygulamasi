@@ -39,11 +39,10 @@
                 <div class="row">
                     <nav class="navbar navbar-expand-lg narbar-light">
                         <a class="navbar-brand mr-auto" href="#">
-<<<<<<< HEAD
+
                             <img src="img/logo.png" alt="Site logo">
-=======
+
                             <img src="img/logo.png" alt="Site logo"> Umuttepe
->>>>>>> b83a173d17c0434fa06d7faf83e976fce2eb4c01
                              Turizm
                         </a>
                         <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,16 +68,12 @@
     }
 </script>
                                 <li class="nav-item">
-<<<<<<< HEAD
+
     <a class="nav-link"  onclick="redirectToLoginPage()">Giriş</a>
 </li>
 
-                              
-
-=======
                                     <a class="nav-link" href="<?php echo base_url('login'); ?>">Giriş</a>
                                 </li>
->>>>>>> b83a173d17c0434fa06d7faf83e976fce2eb4c01
                             </ul>
                         </div>
                     </nav>
