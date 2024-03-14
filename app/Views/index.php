@@ -1,35 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Journey HTML CSS Template</title>
-    <!--
-    Journey Template
-    http://www.templatemo.com/tm-511-journey
-    -->
-    <!-- load stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css">                                   <!-- Templatemo style -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <?php include('header.php') ?>
+    
+    <title>Umuttepe Turizm</title>
 </head>
 
 <body>
-
     <div class="tm-main-content" id="top">
         <div class="tm-top-bar-bg"></div>
 
@@ -39,10 +16,7 @@
                 <div class="row">
                     <nav class="navbar navbar-expand-lg narbar-light">
                         <a class="navbar-brand mr-auto" href="#">
-
-
-                            <img src="img/logo.png" alt="Site logo"> Umuttepe
-                             Turizm
+                            <img src="assets/img/logo2.png" alt="Site logo">
                         </a>
                         <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -52,31 +26,37 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#top">ANASAYFA <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a class="nav-link" href="#tm-section-2">Top Destinations</a>
-                                </li>
+                                </li>-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tm-section-3">Recommended Places</a>
+                                </li>
+                                <li class="nav-item" >
+                                    <a class="nav-link" href="#pnr">Bilet Sorgula</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tm-section-4">İletişim</a>
                                 </li>
                                 <script>
-    function redirectToLoginPage() {
-        window.location.href="login.php";
-    }
-</script>
+                                function redirectToLoginPage() {
+                                    window.location.href="login/";
+                                }
+                                </script>
+                                
                                 <li class="nav-item">
 
     <a class="nav-link"  onclick="redirectToLoginPage()">Giriş</a>
 </li>
+
+
                             </ul>
                         </div>
                     </nav>
+                    
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- .tm-top-bar -->
-
 
         <div class="tm-page-wrap mx-auto">
             <section class="tm-banner">
@@ -95,20 +75,26 @@
                             </div>  <!-- col-xs-12 -->
                         </div> <!-- row -->
                         <!--    BİLET SORGU      -->
+
+                    
                         <div class="row tm-banner-row" id="tm-section-search">
 
-                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
-                                <div class="form-row tm-search-form-row">
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2" id="search-ticket">
+                            <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="bus" style="margin-bottom: 2%;">Otobüs</button>
+                            <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="pnr" style="margin-bottom: 2%;">PNR</button>
+                            <div id="description-title">
+                            </div>
+                            <div class="form-row tm-search-form-row" id="bus-section">
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="kalkissehri">Kalkış</label>
                                         <select name="kalkissehri" class="form-control tm-select" id="kalkissehri">
                                             <option value="0" selected>Şehir seçiniz</option>
                                             <option value="1">Şehir1</option>
                                             <option value="2">Şehir2</option>
                                         </select>
-                                        <i class="fa fa-exchange changeRoute" id="changeCities" aria-hidden="true"></i>
                                     </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                                    <i class="fa fa-exchange changeRoute" id="changeCities" aria-hidden="true"></i>
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="varissehri">Varış</label>
                                         <select name="varissehri" class="form-control tm-select" id="varissehri">
                                             <option value="0" selected>Şehir seçiniz</option>
@@ -116,9 +102,6 @@
                                             <option value="2">Şehir2</option>
                                         </select>
                                     </div>
-                                </div> <!-- form-row -->
-                                <div class="form-row tm-search-form-row">
-
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="gidisTarihi">Gidiş Tarihi</label>
                                         <input name="check-in" type="text" class="form-control" id="gidisTarihi" placeholder="Tarih Seçiniz">
@@ -127,36 +110,34 @@
                                         <label for="donusTarihi">Dönüş Tarihi</label>
                                         <input name="check-out" type="text" class="form-control" id="donusTarihi" placeholder="Tarih Seçiniz">
                                     </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                            </div> <!-- form-row -->
+                            <div class="form-row tm-search-form-row" id="pnr-section" style="display:none;">
+                            <?php include('pnr.php')?>
+                                <!--<label for="pnr">PNR Numarası:</label>
+                                <input id="pnr" type="text" name="pnr" placeholder="PNR Numaranız">-->
+                            </div>
+                            
+                            <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                         <label for="btnSubmit">&nbsp;</label>
-                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Bilet Bul</button>
+                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase send pnr-btn" id="send-button">Bilet Bul</button>
                                     </div>
-                                </div>
                             </form>
 
                         </div> <!-- row -->
 
+                        
+
                         <div class="tm-banner-overlay"></div>
+
+                        
                     </div>  <!-- .container -->
                 </div>     <!-- .tm-container-outer -->
             </section>
 
-            
 
-            <section class="p-5 tm-container-outer tm-bg-gray">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">
-                            <h2 class="text-uppercase mb-4">Your <strong>Journey</strong> is our priority</h2>
-                            <p class="mb-4">Nullam auctor, sapien sit amet lacinia euismod, lorem magna lobortis massa, in tincidunt mi metus quis lectus. Duis nec lobortis velit. Vivamus id magna vulputate, tempor ante eget, tempus augue. Maecenas ultricies neque magna.</p>
-                            <a href="#" class="text-uppercase btn-primary tm-btn">Continue explore</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <div class="tm-container-outer" id="tm-section-2">
-                <section class="tm-slideshow-section">
+                <!--<section class="tm-slideshow-section">
                     <div class="tm-slideshow">
                         <img src="img/tm-img-01.jpg" alt="Image">
                         <img src="img/tm-img-02.jpg" alt="Image">
@@ -194,7 +175,7 @@
                         <p>Donec nec laoreet diam, at vehicula ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse nec dapibus nunc, quis viverra metus. Morbi eget diam gravida, euismod magna vel, tempor urna.</p>
                         <a href="#" class="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
                     </div>
-                </section>
+                </section>-->
             </div>
             <div class="tm-container-outer" id="tm-section-3">
                 <ul class="nav nav-pills tm-tabs-links">
@@ -660,7 +641,7 @@
                     </div> <!-- tab-pane -->
                 </div>
             </div>
-
+<!--İLETİŞİM-->
             <div class="tm-container-outer tm-position-relative" id="tm-section-4">
                 <div id="google-map"></div>
                 <form action="index.html" method="post" class="tm-contact-form">
@@ -689,14 +670,7 @@
             </footer>
         </div>
     </div> <!-- .main-content -->
-    <!-- load JS files -->
-    <script src="assets/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-    <script src="assets/js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->
-    <script src="assets/js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
-    <script src="assets/js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
-    <script src="assets/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
-    <script src="assets/slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
-    <script src="assets/js/jquery.scrollTo.min.js"></script>           <!-- https://github.com/flesler/jquery.scrollTo -->
+    
     <script>
 
         /* Google Maps API
@@ -792,6 +766,74 @@
     });
     });
     </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".nav-item a[href='#pnr']").addEventListener("click", function(event) {
+            event.preventDefault(); // Bağlantının varsayılan davranışını engelle
+
+            busSection.style.display = "none";
+        pnrSection.style.display = "block";
+            // İstediğiniz HTML içeriği
+            /*var newContent = `
+                <section class="p-5 tm-container-outer tm-bg-gray" id="tm-section-pnr">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">
+                                <h2 class="text-uppercase mb-4">Your <strong>Journey</strong> is our priority</h2>
+                                <p class="mb-4">Nullam auctor, sapien sit amet lacinia euismod, lorem magna lobortis massa, in tincidunt mi metus quis lectus. Duis nec lobortis velit. Vivamus id magna vulputate, tempor ante eget, tempus augue. Maecenas ultricies neque magna.</p>
+                                <a href="#" class="text-uppercase btn-primary tm-btn">Continue explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `;*/
+
+            // Yeni içeriği yerine koy
+            document.getElementById("tm-section-search").innerHTML = newContent;
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var busButton = document.querySelector('.search-type[data-type="bus"]');
+    var pnrButton = document.querySelector('.search-type[data-type="pnr"]');
+    var busSection = document.getElementById("bus-section");
+    var pnrSection = document.getElementById("pnr-section");
+
+    // Otobüs butonuna tıklandığında
+    busButton.addEventListener("click", function() {
+        busSection.style.display = "block";
+        pnrSection.style.display = "none";
+    });
+
+    // PNR butonuna tıklandığında
+    pnrButton.addEventListener("click", function() {
+        busSection.style.display = "none";
+        pnrSection.style.display = "block";
+    });
+
+    // Formu gönderme
+    var sendButton = document.getElementById("send-button");
+    sendButton.addEventListener("click", function(event) {
+        event.preventDefault(); // Formun submit olayını engelle
+
+        var formData = {
+            type: document.querySelector('button.search-type.active').getAttribute('data-type'),
+            pnr: document.getElementById("pnr").value,
+            departureDate: document.getElementById("departure-date").value,
+            returnDate: document.getElementById("return-date").value,
+            departureCity: document.getElementById("departure-city").value,
+            arrivalCity: document.getElementById("arrival-city").value,
+            contact: document.getElementById("contact").value
+        };
+
+        // Burada form verilerini bir API'ye gönderme veya başka bir işlem yapma kodunu ekleyebilirsiniz
+        console.log("Form Verileri:", formData);
+    });
+});
+
+</script>
+
 
 </body>
 </html>
