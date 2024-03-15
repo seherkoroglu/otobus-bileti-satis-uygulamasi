@@ -5,7 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'HomeController::index');
 //URL e login yazıldığında LoginController altında index çalışsın
-$routes->get('login', 'Login::index');
-$routes->post('login/login_process', 'Login::login_process');
+$routes->get('login', 'LoginController::index');
+$routes->post('login/login_process', 'LoginController::login_process');
+$routes->post('journeys', 'JourneysController::index');

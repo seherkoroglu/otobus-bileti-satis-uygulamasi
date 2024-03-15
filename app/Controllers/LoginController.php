@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 
 
-class Login extends Controller
+class LoginController extends Controller
 {
     public function index()
     {

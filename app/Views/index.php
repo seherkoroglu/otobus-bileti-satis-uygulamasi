@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include('header.php') ?>
+    <?php include('head.php') ?>
     
     <title>Umuttepe Turizm</title>
 </head>
@@ -40,16 +40,12 @@
                                 </li>
                                 <script>
                                 function redirectToLoginPage() {
-                                    window.location.href="login/";
+                                    window.location.href="login";
                                 }
                                 </script>
-                                
                                 <li class="nav-item">
-
-    <a class="nav-link"  onclick="redirectToLoginPage()">Giriş</a>
-</li>
-
-
+                                    <a class="nav-link"  onclick="redirectToLoginPage()">Giriş</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -79,12 +75,12 @@
                     
                         <div class="row tm-banner-row" id="tm-section-search">
 
-                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2" id="search-ticket">
-                            <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="bus" style="margin-bottom: 2%;">Otobüs</button>
-                            <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="pnr" style="margin-bottom: 2%;">PNR</button>
-                            <div id="description-title">
-                            </div>
-                            <div class="form-row tm-search-form-row" id="bus-section">
+                            <form  method="post" class="tm-search-form tm-section-pad-2" id="search-ticket">
+                                <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="bus" style="margin-bottom: 2%;">Otobüs</button>
+                                <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="pnr" style="margin-bottom: 2%;">PNR</button>
+                                <div id="description-title">
+                                </div>
+                                <div class="form-row tm-search-form-row" id="bus-section">
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="kalkissehri">Kalkış</label>
                                         <select name="kalkissehri" class="form-control tm-select" id="kalkissehri">
@@ -106,27 +102,22 @@
                                         <label for="gidisTarihi">Gidiş Tarihi</label>
                                         <input name="check-in" type="text" class="form-control" id="gidisTarihi" placeholder="Tarih Seçiniz">
                                     </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-                                        <label for="donusTarihi">Dönüş Tarihi</label>
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">                                        <label for="donusTarihi">Dönüş Tarihi</label>
                                         <input name="check-out" type="text" class="form-control" id="donusTarihi" placeholder="Tarih Seçiniz">
                                     </div>
-                            </div> <!-- form-row -->
-                            <div class="form-row tm-search-form-row" id="pnr-section" style="display:none;">
-                            <?php include('pnr.php')?>
-                                <!--<label for="pnr">PNR Numarası:</label>
-                                <input id="pnr" type="text" name="pnr" placeholder="PNR Numaranız">-->
-                            </div>
-                            
-                            <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="btnSubmit">&nbsp;</label>
-                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase send pnr-btn" id="send-button">Bilet Bul</button>
-                                    </div>
+                                </div>
+                                <div class="form-row tm-search-form-row" id="pnr-section" style="display:none;">
+                                    <?php include('pnr.php')?>
+                                    <!--<label for="pnr">PNR Numarası:</label>
+                                    <input id="pnr" type="text" name="pnr" placeholder="PNR Numaranız">-->
+                                </div>
+                                <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                                    <label for="btnSubmit">&nbsp;</label>
+                                    <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase send pnr-btn" id="send-button">Sefer Sorgula</button>
+                                </div>
                             </form>
-
+                            </div> <!-- form-row -->
                         </div> <!-- row -->
-
-                        
-
                         <div class="tm-banner-overlay"></div>
 
                         
@@ -767,14 +758,14 @@
     });
     </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+                /*document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".nav-item a[href='#pnr']").addEventListener("click", function(event) {
             event.preventDefault(); // Bağlantının varsayılan davranışını engelle
 
             busSection.style.display = "none";
         pnrSection.style.display = "block";
             // İstediğiniz HTML içeriği
-            /*var newContent = `
+var newContent = `
                 <section class="p-5 tm-container-outer tm-bg-gray" id="tm-section-pnr">
                     <div class="container">
                         <div class="row">
@@ -786,12 +777,12 @@
                         </div>
                     </div>
                 </section>
-            `;*/
+            `;
 
             // Yeni içeriği yerine koy
             document.getElementById("tm-section-search").innerHTML = newContent;
         });
-    });
+    });*/
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -813,26 +804,32 @@
     });
 
     // Formu gönderme
-    var sendButton = document.getElementById("send-button");
-    sendButton.addEventListener("click", function(event) {
+    var form = document.getElementById("search-ticket");
+    form.addEventListener("submit", function(event) {
         event.preventDefault(); // Formun submit olayını engelle
 
         var formData = {
-            type: document.querySelector('button.search-type.active').getAttribute('data-type'),
-            pnr: document.getElementById("pnr").value,
-            departureDate: document.getElementById("departure-date").value,
-            returnDate: document.getElementById("return-date").value,
-            departureCity: document.getElementById("departure-city").value,
-            arrivalCity: document.getElementById("arrival-city").value,
-            contact: document.getElementById("contact").value
+            type: document.querySelector('button.search-type.active').getAttribute('data-type')
         };
 
-        // Burada form verilerini bir API'ye gönderme veya başka bir işlem yapma kodunu ekleyebilirsiniz
-        console.log("Form Verileri:", formData);
+        // Otobüs seçeneği seçilmişse ve formda veri varsa
+        if (formData.type === "bus" && document.getElementById("gidisTarihi").value && document.getElementById("donusTarihi").value && document.getElementById("kalkissehri").value && document.getElementById("varissehri").value && document.getElementById("contact").value) {
+            // Otobüs seçeneği seçilmişse ve form verileri uygunsa SeferlerController'a yönlendir
+            window.location.href = "/journeys";
+            form.submit();
+        } else if (formData.type === "pnr" && document.getElementById("pnr").value) {
+            // PNR seçeneği seçilmişse ve PNR numarası girilmişse BiletController'a yönlendir
+            form.action = "<?= base_url('bilet') ?>";
+            form.submit();
+        } else {
+            // Kullanıcıya uygun bir hata mesajı göstermek için gerekli adımlar
+            alert("Lütfen tüm gerekli alanları doldurun.");
+        }
     });
 });
 
 </script>
+
 
 
 </body>
