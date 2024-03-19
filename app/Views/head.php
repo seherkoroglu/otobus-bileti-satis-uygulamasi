@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-style.css">                                   <!-- Templatemo style -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,3 +31,7 @@
     <script src="assets/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
     <script src="assets/slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
     <script src="assets/js/jquery.scrollTo.min.js"></script>           <!-- https://github.com/flesler/jquery.scrollTo -->
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>

@@ -75,7 +75,7 @@
                     
                         <div class="row tm-banner-row" id="tm-section-search">
 
-                            <form  method="post" class="tm-search-form tm-section-pad-2" id="search-ticket">
+                            <form  action="<?= base_url('seferler') ?>" method="post" class="tm-search-form tm-section-pad-2" id="search-ticket">
                                 <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="bus" style="margin-bottom: 2%;">Otobüs</button>
                                 <button type="button" class="search-type btn btn-primary tm-btn text-uppercase" data-type="pnr" style="margin-bottom: 2%;">PNR</button>
                                 <div id="description-title">
@@ -590,42 +590,42 @@
 
                             <div class="tm-recommended-place">
                                 <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
-                                <div class="tm-recommended-description-box">
+            <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Pulvinar Semper</h3>
                                     <p class="tm-text-highlight">Ant City Two</p>
                                     <p class="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                                </div>
-                                <a href="#" class="tm-recommended-price-box">
+            </div>
+            <a href="#" class="tm-recommended-price-box">
                                     <p class="tm-recommended-price">$230</p>
                                     <p class="tm-recommended-price-link">Continue Reading</p>
-                                </a>
-                            </div>
+            </a>
+            </div>
 
-                            <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
-                                <div class="tm-recommended-description-box">
-                                    <h3 class="tm-recommended-title">Cras vel sapien</h3>
-                                    <p class="tm-text-highlight">Ant City Three</p>
-                                    <p class="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                                </div>
-                                <a href="#" class="tm-recommended-price-box">
-                                    <p class="tm-recommended-price">$140</p>
-                                    <p class="tm-recommended-price-link">Continue Reading</p>
-                                </a>
-                            </div>
+            <div class="tm-recommended-place">
+                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                <div class="tm-recommended-description-box">
+                    <h3 class="tm-recommended-title">Cras vel sapien</h3>
+                    <p class="tm-text-highlight">Ant City Three</p>
+                    <p class="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
+                </div>
+                    <a href="#" class="tm-recommended-price-box">
+                        <p class="tm-recommended-price">$140</p>
+                        <p class="tm-recommended-price-link">Continue Reading</p>
+                    </a>
+                </div>
 
-                            <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
-                                <div class="tm-recommended-description-box">
-                                    <h3 class="tm-recommended-title">Nullam eget est</h3>
-                                    <p class="tm-text-highlight">Ant City Four</p>
-                                    <p class="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                                </div>
-                                <a href="#" class="tm-recommended-price-box">
-                                    <p class="tm-recommended-price">$190</p>
-                                    <p class="tm-recommended-price-link">Continue Reading</p>
-                                </a>
-                            </div>
+                <div class="tm-recommended-place">
+                    <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                        <div class="tm-recommended-description-box">
+                            <h3 class="tm-recommended-title">Nullam eget est</h3>
+                            <p class="tm-text-highlight">Ant City Four</p>
+                            <p class="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
+                        </div>
+                        <a href="#" class="tm-recommended-price-box">
+                            <p class="tm-recommended-price">$190</p>
+                            <p class="tm-recommended-price-link">Continue Reading</p>
+                        </a>
+                        </div>
                         </div>
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
@@ -652,12 +652,8 @@
                 </form>
             </div> <!-- .tm-container-outer -->
 
-            <footer class="tm-container-outer">
-                <p class="mb-0">
-                    Copyright © <span class="tm-current-year">2018</span> Your Company
-
-                    . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Template Mo</a>
-                </p>
+            <footer id="footer" class="pt-4">
+                <?php include('footer.php')?>
             </footer>
         </div>
     </div> <!-- .main-content -->
@@ -748,42 +744,16 @@
     <script>
     $(document).ready(function () {
     $("#changeCities").on("click", function () {
-    var kalkisDurak = $("#kalkis-durak-list").val();
-    var varisDurak = $("#varis-durak-list").val();
+    var kalkisDurak = $("#kalkissehri").val();
+    var varisDurak = $("varissehri").val();
 
     // Değiştirme işlemi
-    $("#kalkis-durak-list").val(varisDurak).change();
-    $("#varis-durak-list").val(kalkisDurak).change();
+    $("#kalkissehri").val(varisDurak).change();
+    $("#varissehri").val(kalkisDurak).change();
     });
     });
     </script>
-<script>
-                /*document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector(".nav-item a[href='#pnr']").addEventListener("click", function(event) {
-            event.preventDefault(); // Bağlantının varsayılan davranışını engelle
 
-            busSection.style.display = "none";
-        pnrSection.style.display = "block";
-            // İstediğiniz HTML içeriği
-var newContent = `
-                <section class="p-5 tm-container-outer tm-bg-gray" id="tm-section-pnr">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">
-                                <h2 class="text-uppercase mb-4">Your <strong>Journey</strong> is our priority</h2>
-                                <p class="mb-4">Nullam auctor, sapien sit amet lacinia euismod, lorem magna lobortis massa, in tincidunt mi metus quis lectus. Duis nec lobortis velit. Vivamus id magna vulputate, tempor ante eget, tempus augue. Maecenas ultricies neque magna.</p>
-                                <a href="#" class="text-uppercase btn-primary tm-btn">Continue explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            `;
-
-            // Yeni içeriği yerine koy
-            document.getElementById("tm-section-search").innerHTML = newContent;
-        });
-    });*/
-</script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
     var busButton = document.querySelector('.search-type[data-type="bus"]');
@@ -804,7 +774,7 @@ var newContent = `
     });
 
     // Formu gönderme
-    var form = document.getElementById("search-ticket");
+    /*var form = document.getElementById("search-ticket");
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Formun submit olayını engelle
 
@@ -825,7 +795,7 @@ var newContent = `
             // Kullanıcıya uygun bir hata mesajı göstermek için gerekli adımlar
             alert("Lütfen tüm gerekli alanları doldurun.");
         }
-    });
+    });*/
 });
 
 </script>
