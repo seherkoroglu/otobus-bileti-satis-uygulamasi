@@ -10,7 +10,8 @@
     <div class="container">
         <div class="row" style="margin-top:45px;">
             <div class="col-md-4 col-md-offset-4">
-                <h4>Sign in</h4><hr>
+                <h2>Umuttepe Turizm'e Hoşgeldiniz!</h2><hr>
+                <h4>Fırsatlardan yararlanmak için şimdi giriş yapın!</h4><hr>
                 <form action="<?= base_url('auth/check'); ?>"  method="post" >
                 <?= csrf_field() ?>
                 <?php if(!empty(session()->getFlashdata('fail'))): ?>
@@ -22,16 +23,16 @@
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Şifre</label>
                     <input type="password" class="form-control" name="password" placeholder="Enter password">
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
 
                 </div>
                 <div class="form-group">
-                    <button class = "btn btn-primary btn-block" type="submit">Sign in</button>
+                    <button class = "btn btn-primary btn-block" type="submit">Giriş Yap</button>
                 </div>
                 <br>
-                <a href="<?= site_url('register'); ?>">I don't have an account, create new</a>
+                <a href="<?= site_url('register'); ?>">Hesabın yok mu, Şimdi Üye Ol!</a>
                 </form>
             </div>
         </div>
