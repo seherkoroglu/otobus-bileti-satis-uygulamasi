@@ -8,4 +8,16 @@ class Dashboard extends BaseController
     {
         return view('dashboard/index');
     }
+
+    public function showBusSeats(): string
+    {
+        return view('dashboard/biletBul');
+    }
+
+    public function search(): string
+    {
+        return view('dashboard/searchResults');
+    }
+
+    
 }

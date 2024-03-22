@@ -15,6 +15,12 @@
         border-radius: 5px;
         cursor: pointer;
       }
+   
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -27,7 +33,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+          <a class="nav-link active" aria-current="page" href="<?= site_url('/dashboard'); ?>">Anasayfa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Biletlerim</a>
@@ -43,6 +49,7 @@
     </div>
   </div>
 </nav>
+
 
 <div class="container mt-5">
   <div class="row">
@@ -60,6 +67,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="container mt-5">
   <div class="row">
