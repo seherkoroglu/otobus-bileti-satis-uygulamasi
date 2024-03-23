@@ -822,3 +822,6 @@ in APPPATH\Views\dashboard\biletBul.php on line 159.
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 16:10:01 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\dashboard\biletBul.php on line 143.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

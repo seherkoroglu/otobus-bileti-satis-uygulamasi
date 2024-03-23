@@ -29,6 +29,25 @@
             width: 80%;
             margin: 0 auto;
         }
+        .bus {
+    width: 800px;
+    margin: 50px auto;
+    position: relative;
+  }
+  .seat {
+    background-color: #ccc;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+  }
+  .clear {
+    clear: both;
+  }
     </style>
     </style>
 </head>
@@ -116,6 +135,19 @@
     <div class="row">
         <div class="col-lg-8 mx-auto text-center">
             <h5>Bus Layout</h5>
+            <div class="bus">
+            <?php
+$seatNumber = 1;
+for ($row = 1; $row <= 4; $row++) {
+    for ($column = $row; $column <= 32; $column += 4) {
+        echo '<div class="seat">' . $column . '</div>';
+    }
+    echo '<br>'; // Her satırın sonunda bir alt satıra geçmek için bir satır ekle
+}
+?>
+
+
+</div>
             <div class="bus" id="bus">
                 <!-- Otobüs koltukları burada dinamik olarak oluşturulacak -->
             </div>
@@ -151,98 +183,7 @@
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var bus = document.getElementById("bus");
-    var seatCount = 40; // Örnek olarak 40 koltuk varsayalım
-    var selectedSeats = []; // Seçilen koltukları tutmak için dizi
 
-    var rowCount = 10; // Her sırada kaç koltuk olacağı
-    var columnCount = seatCount / rowCount; // Toplam sütun sayısı
-
-    for (var col = 1; col <= columnCount; col++) {
-        for (var row = 1; row <= rowCount; row++) {
-            var seatNumber = (row - 1) * columnCount + col;
-            var seat = document.createElement("div");
-            seat.className = "seat";
-            seat.innerText = seatNumber;
-            seat.dataset.seatNumber = seatNumber;
-            seat.addEventListener("click", function() {
-                toggleSeatSelection(this);
-            });
-            bus.appendChild(seat);
-        }
-    }
-   
-
-    function toggleSeatSelection(seat) {
-        var gender = document.getElementById("genderSelect").value;
-
-        // Seçilen cinsiyete göre koltuk rengini belirle
-        var color = gender === "Male" ? "lightblue" : "pink";
-
-        // Koltuğun rengini kontrol et
-        if (seat.style.backgroundColor === color) {
-            // Koltuk zaten seçili ise seçimi kaldır
-            seat.style.backgroundColor = "";
-            var index = selectedSeats.indexOf(seat.dataset.seatNumber);
-            if (index > -2) {
-                selectedSeats.splice(index, 1);
-            }
-        } else {
-            // Seçilen koltuk sayısını kontrol et
-            var numPassengers = parseInt(document.getElementById("numPassengers").value);
-            if (selectedSeats.length >= numPassengers) {
-                alert("You have already selected the maximum number of seats.");
-                return;
-            }
-
-            // Yanındaki koltukları kontrol et
-            var adjacentSeats = getAdjacentSeats(seat);
-            var isAdjacentSeatSelected = false;
-            for (var i = 0; i < adjacentSeats.length; i++) {
-                var seatGender = adjacentSeats[i].dataset.gender;
-                if (seatGender === gender) {
-                    isAdjacentSeatSelected = true;
-                    break;
-                }
-            }
-
-            // Kadın ve erkek yan yana oturamaz kontrolü
-            if (isAdjacentSeatSelected) {
-                alert("You cannot select a seat next to someone of the opposite gender.");
-                return;
-            }
-
-            // Koltuğu seç
-            seat.style.backgroundColor = color;
-            selectedSeats.push(seat.dataset.seatNumber);
-        }
-    }
-
-    function getAdjacentSeats(seat) {
-        var adjacentSeats = [];
-        var seatNumber = parseInt(seat.dataset.seatNumber);
-
-        // Sol taraftaki koltuk
-        var leftSeat = document.querySelector(".seat[data-seatNumber='" + (seatNumber - 1) + "']");
-        if (leftSeat) {
-            adjacentSeats.push(leftSeat);
-        }
-
-        // Sağ taraftaki koltuk
-        var rightSeat = document.querySelector(".seat[data-seatNumber='" + (seatNumber + 1) + "']");
-        if (rightSeat) {
-            adjacentSeats.push(rightSeat);
-        }
-
-        return adjacentSeats;
-    }
-
-});
-
-
-</script>
 <br><br><br>
     
     
