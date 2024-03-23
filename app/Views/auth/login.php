@@ -12,7 +12,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <h2>Umuttepe Turizm'e Hoşgeldiniz!</h2><hr>
                 <h4>Fırsatlardan yararlanmak için şimdi giriş yapın!</h4><hr>
-                <form action="<?= base_url('auth/check'); ?>"  method="post" >
+                <form action="<?= base_url('auth/check'); ?>"  method="post" autocomplete="off" >
                 <?= csrf_field() ?>
                 <?php if(!empty(session()->getFlashdata('fail'))): ?>
                 <div class="alert alert-danger"><?= session()->getFlashdata('fail') ?></div>

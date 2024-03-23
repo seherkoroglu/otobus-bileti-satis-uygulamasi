@@ -1,0 +1,824 @@
+ERROR - 2024-03-23 09:31:49 --> mysqli_sql_exception: Unknown column 'seyahatlertablosu.id' in 'where clause' in C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Busla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Busla\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Busla\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\Busla\app\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\Busla\system\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+#8 C:\xampp\htdocs\Busla\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#9 C:\xampp\htdocs\Busla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Busla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Busla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-03-23 09:31:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'seyahatlertablosu.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = :seyahatlertablosu.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:31:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'seyahatlertablosu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = :seyahatlertablosu.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:31:49 --> [Caused by] mysqli_sql_exception: Unknown column 'seyahatlertablosu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = :seyahatlertablosu.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+ERROR - 2024-03-23 09:32:52 --> mysqli_sql_exception: Unknown column 'seyahatlertablosu.id' in 'where clause' in C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Busla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Busla\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Busla\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\Busla\app\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\Busla\system\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+#8 C:\xampp\htdocs\Busla\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#9 C:\xampp\htdocs\Busla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Busla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Busla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-03-23 09:32:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'seyahatlertablosu.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = :seyahatlertablosu.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:32:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'seyahatlertablosu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = :seyahatlertablosu.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:32:52 --> [Caused by] mysqli_sql_exception: Unknown column 'seyahatlertablosu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seyahatlertablosu`
+WHERE `seyahatlertablosu`.`id` = :seyahatlertablosu.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Bilet.php(28): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:34:00 --> ErrorException: Undefined variable $seyahatDetaylari
+in APPPATH\Views\dashboard\biletBul.php on line 59.
+ 1 APPPATH\Views\dashboard\biletBul.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seyahatDetaylari', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:34:54 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 61.
+ 1 APPPATH\Views\dashboard\biletBul.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:41:01 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 60.
+ 1 APPPATH\Views\dashboard\biletBul.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 60)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+ERROR - 2024-03-23 09:44:02 --> mysqli_sql_exception: Unknown column 'terminaller.id' in 'where clause' in C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Busla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Busla\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Busla\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\Busla\app\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\Busla\system\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+#8 C:\xampp\htdocs\Busla\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#9 C:\xampp\htdocs\Busla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Busla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Busla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-03-23 09:44:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:44:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:44:02 --> [Caused by] mysqli_sql_exception: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+ERROR - 2024-03-23 09:47:53 --> mysqli_sql_exception: Unknown column 'terminaller.id' in 'where clause' in C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Busla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Busla\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Busla\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\Busla\app\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\Busla\system\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+#8 C:\xampp\htdocs\Busla\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#9 C:\xampp\htdocs\Busla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Busla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Busla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-03-23 09:47:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:47:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:47:53 --> [Caused by] mysqli_sql_exception: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+ERROR - 2024-03-23 09:50:13 --> mysqli_sql_exception: Unknown column 'terminaller.id' in 'where clause' in C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Busla\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Busla\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Busla\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Busla\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Busla\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\Busla\app\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\Busla\system\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+#8 C:\xampp\htdocs\Busla\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#9 C:\xampp\htdocs\Busla\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Busla\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Busla\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-03-23 09:50:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:50:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:50:13 --> [Caused by] mysqli_sql_exception: Unknown column 'terminaller.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terminaller`
+WHERE `terminaller`.`id` = :terminaller.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Bilet.php(32): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:51:43 --> ErrorException: Array to string conversion
+in APPPATH\Views\dashboard\biletBul.php on line 60.
+ 1 APPPATH\Views\dashboard\biletBul.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 60)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(50): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:52:52 --> ErrorException: Array to string conversion
+in APPPATH\Views\dashboard\biletBul.php on line 60.
+ 1 APPPATH\Views\dashboard\biletBul.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 60)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(50): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:54:27 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 32.
+ 1 APPPATH\Controllers\Bilet.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 09:57:12 --> ErrorException: Undefined array key "city"
+in APPPATH\Controllers\Bilet.php on line 36.
+ 1 APPPATH\Controllers\Bilet.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "city"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:02:42 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 32.
+ 1 APPPATH\Controllers\Bilet.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:03:07 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 32.
+ 1 APPPATH\Controllers\Bilet.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:09:04 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 32.
+ 1 APPPATH\Controllers\Bilet.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:10:07 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 32.
+ 1 APPPATH\Controllers\Bilet.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:12:29 --> ErrorException: Undefined variable $seyahatDetaylari
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seyahatDetaylari', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(25): view('dashboard/biletBul')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:13:40 --> ErrorException: Undefined array key "tripID"
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tripID"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:15:43 --> ErrorException: Undefined variable $seyahatDetaylari
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seyahatDetaylari', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(25): view('dashboard/biletBul')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:20:54 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 61.
+ 1 APPPATH\Views\dashboard\biletBul.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(34): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:25:34 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 61.
+ 1 APPPATH\Views\dashboard\biletBul.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(30): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:26:56 --> ErrorException: Undefined variable $seyahat
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(30): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:27:57 --> ErrorException: Undefined variable $selectedSeyahat
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(30): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:29:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(22): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:32:09 --> ErrorException: Undefined variable $selectedSeyahat
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(30): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:35:38 --> ErrorException: Undefined variable $selectedSeyahat
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(30): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:45:04 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 61.
+ 1 APPPATH\Views\dashboard\biletBul.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(30): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:47:00 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 61.
+ 1 APPPATH\Views\dashboard\biletBul.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(38): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:51:24 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 61.
+ 1 APPPATH\Views\dashboard\biletBul.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(37): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:55:31 --> ErrorException: Undefined variable $seyahatBilgisi
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seyahatBilgisi', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(37): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:56:13 --> ErrorException: Undefined variable $selectedSeyahat
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:56:59 --> ErrorException: Undefined variable $selectedSeyahatID
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahatID', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 10:58:44 --> ErrorException: Undefined variable $selectedSeyahat
+in APPPATH\Views\dashboard\biletBul.php on line 58.
+ 1 APPPATH\Views\dashboard\biletBul.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(31): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:00:07 --> ErrorException: Undefined variable $selectedSeyahat
+in APPPATH\Controllers\Bilet.php on line 31.
+ 1 APPPATH\Controllers\Bilet.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedSeyahat', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:02:47 --> ErrorException: Undefined variable $seyahatler
+in APPPATH\Views\dashboard\biletBul.php on line 66.
+ 1 APPPATH\Views\dashboard\biletBul.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seyahatler', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(17): view('dashboard/biletBul')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:07:56 --> ErrorException: Undefined array key "tripID"
+in APPPATH\Views\dashboard\biletBul.php on line 60.
+ 1 APPPATH\Views\dashboard\biletBul.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tripID"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 60)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:09:09 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 62.
+ 1 APPPATH\Views\dashboard\biletBul.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:09:41 --> ErrorException: Undefined array key "tripID"
+in APPPATH\Views\dashboard\biletBul.php on line 60.
+ 1 APPPATH\Views\dashboard\biletBul.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tripID"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 60)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:10:50 --> ErrorException: Undefined array key "departureTerminal"
+in APPPATH\Views\dashboard\biletBul.php on line 62.
+ 1 APPPATH\Views\dashboard\biletBul.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminal"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:14:30 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 21.
+ 1 APPPATH\Controllers\Bilet.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:14:49 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 21.
+ 1 APPPATH\Controllers\Bilet.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:15:05 --> ErrorException: Array to string conversion
+in APPPATH\Views\dashboard\biletBul.php on line 62.
+ 1 APPPATH\Views\dashboard\biletBul.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(27): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:15:31 --> ErrorException: Undefined array key "tripID"
+in APPPATH\Views\dashboard\biletBul.php on line 60.
+ 1 APPPATH\Views\dashboard\biletBul.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tripID"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 60)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:18:19 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 24.
+ 1 APPPATH\Controllers\Bilet.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:22:09 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 24.
+ 1 APPPATH\Controllers\Bilet.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:24:03 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 24.
+ 1 APPPATH\Controllers\Bilet.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 11:29:30 --> ErrorException: Undefined array key "latitude"
+in APPPATH\Views\dashboard\biletBul.php on line 81.
+ 1 APPPATH\Views\dashboard\biletBul.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "latitude"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 81)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(34): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+INFO - 2024-03-23 15:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-23 15:07:56 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\SeatController.php on line 83.
+ 1 APPPATH\Controllers\SeatController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->buySeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 15:53:50 --> ErrorException: Undefined variable $seatCount
+in APPPATH\Views\dashboard\biletBul.php on line 159.
+ 1 APPPATH\Views\dashboard\biletBul.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $seatCount', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 159)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(33): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')

@@ -5,25 +5,33 @@ namespace App\Controllers;
 use App\Models\SeyahatModel;
 use App\Models\TerminallerModel;
 
-
-class Bilet extends BaseController
-{
-    public function biletBul()
-
+    class Bilet extends BaseController
     {
-        // $db = \Config\Database::connect();
-        // $selectedSeyahatID = $this->request->getPost('tripID');
-
-        // if (!empty($selectedSeyahatID)) {
-        //     $model = new SeyahatModel();
-        //     $selectedSeyahat = $model->find($selectedSeyahatID);
-        //     $data['selectedSeyahat'] = $selectedSeyahat;
-        // } else {
-        //     $data['selectedSeyahat'] = null;
-        // }
-    
-        return view('dashboard/biletBul');
-    }
+        public function biletBul()
+        {
+            $tripID = $this->request->getPost('tripID'); // Seçilen seyahatin ID'sini al
+        
+            // Trip ID ile seyahat detaylarını çek
+            $seyahatModel = new SeyahatModel();
+            $selected_trip = $seyahatModel->find($tripID);
+        
+            // Seyahatin ayrıntılarını almak için terminal modellerini kullan
+            $departureTerminalModel = new TerminallerModel();
+            $arrivalTerminalModel = new TerminallerModel();
+        
+            // Seyahatin kalkış terminalini al
+            $departureTerminal = $departureTerminalModel->find($selected_trip['departureTerminalID']);
+        
+            // Seyahatin varış terminalini al
+            $arrivalTerminal = $arrivalTerminalModel->find($selected_trip['arrivalTerminalID']);
+        
+            // Seyahat detaylarını view'e aktar
+            $data['selected_trip'] = $selected_trip;
+            $data['departureTerminal'] = $departureTerminal;
+            $data['arrivalTerminal'] = $arrivalTerminal;
+        
+            return view('dashboard/biletBul', $data);
+        } 
 
     public function biletAra()
     {
@@ -57,3 +65,7 @@ class Bilet extends BaseController
 
 
 }
+
+
+
+

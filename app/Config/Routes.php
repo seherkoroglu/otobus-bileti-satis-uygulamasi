@@ -26,6 +26,12 @@ $routes->get('/biletBul', 'SeatController::showBusSeats');
 $routes->post('bilet/check', 'Bilet::check');
 $routes->get('bilet/biletAra', 'Bilet::check');
 $routes->post('bilet/showMap', 'Bilet::showMap');
+$routes->post('seatController/showBusSeats', 'SeatController::showBusSeats');
+$routes->post('seatController/reserveSeats', 'SeatController::reserveSeats');
+$routes->post('seatController/buySeats', 'SeatController::buySeats');
+$routes->get('seatController/reserveSeats', 'SeatController::reserveSeats');
+$routes->get('seatController/buySeats', 'SeatController::buySeats');
+$routes->get('/odeme', 'OdemeController::index');
 
 
 

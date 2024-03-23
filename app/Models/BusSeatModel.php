@@ -4,10 +4,7 @@ use CodeIgniter\Model;
 
 class BusSeatModel extends Model {
     protected $table = 'koltuklar';
-    protected $allowedFields = ['tripID', 'seatNumber', 'isAvailable', 'isReserved'];
-
-    public function getBusSeatsByTripID($tripID) {
-        return $this->where('tripID', $tripID)->findAll();
-    }
+    protected $allowedFields = ['seatID', 'tripID', 'seatNumber', 'isAvailable', 'isReserved','isSold', 'tripType', 'genderPreference', 'age', 'discountType' ];
+    
 }
 
