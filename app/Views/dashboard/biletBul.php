@@ -48,8 +48,15 @@
   .clear {
     clear: both;
   }
+  .male {
+    background-color: blue;
+}
+
+.female {
+    background-color: pink;
+}
     </style>
-    </style>
+   
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -131,54 +138,110 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDetN6rJRr6m5Ce84FLV8JWlG277RFX1BA&callback=initMap" async defer></script>
 
-<div class="container mt-5">
+    <div class="container mt-5">
     <div class="row">
         <div class="col-lg-8 mx-auto text-center">
             <h5>Bus Layout</h5>
             <div class="bus">
             <?php
-$seatNumber = 1;
-for ($row = 1; $row <= 4; $row++) {
-    for ($column = $row; $column <= 32; $column += 4) {
-        echo '<div class="seat">' . $column . '</div>';
-    }
-    echo '<br>'; // Her satırın sonunda bir alt satıra geçmek için bir satır ekle
-}
-?>
+            $seatNumber = 1;
+            for ($row = 1; $row <= 4; $row++) {
+              for ($column = $row; $column <= 32; $column += 4) {
+                echo '<div class="seat';
+                // Check the selected gender and add appropriate CSS class
+                if (isset ($_POST['genderPreference'])) {
+                  if ($_POST['genderPreference'] == 'Male') {
+                    echo ' male';
+                  } elseif ($_POST['genderPreference'] == 'Female') {
+                    echo ' female';
+                  }
+                }
+                echo '">' . $column . '</div>';
+              }
+              echo '<br>'; // Her satırın sonunda bir alt satıra geçmek için bir satır ekle
+            }
+            ?>
+            
+            </div>
+            
+            
+            </div>
+           
+       
+        <label for="numPassengers">yolcu sayısı:</label>
+        <input type="number" id="numPassengers" name="numPassengers" min="1" value="1">
+       
+        <label for="genderPreference" class="ms-3">Gender:</label>
+        <select id="genderPreference" name="genderPreference" >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        
+        <br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" value="1">
+        <label for="discountType" class="ms-3">Discount Type:</label>
+        <select id="discountType" name="discountType">
+            <option value="Student">Student</option>
+            <option value="Senior">Senior (65+)</option>
+            <option value="Employee">Employee</option>
+            <option value="Security">Security Forces</option>
+        </select>
+        <br><br>
+        <form action="<?= base_url('seatController/reserveSeats') ?>" method="post">
+        <button type="submit" class="btn btn-success mt-1">Reserve Seats</button>
+        </form>
+        <form action="<?= base_url('odeme') ?>" method="post">
+        <button type="submit" id="buyButton" class="btn btn-success mt-1">Buy Seats</button>
+    </form>
+    <p><a href="<?= base_url('payment') ?>" class="btn btn-primary mt-1">Hemen satın al</a></p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const seats = document.querySelectorAll('.seat');
+        const numPassengersInput = document.getElementById('numPassengers');
+        let selectedSeats = [];
+        let selectedGender = '';
+
+        // Koltuklara tıklama olayını ekle
+        seats.forEach(function (seat) {
+            seat.addEventListener('click', function () {
+                // Seçilen cinsiyeti ve yolcu sayısını al
+                selectedGender = document.getElementById('genderPreference').value;
+                const numPassengers = parseInt(numPassengersInput.value);
+
+                // Koltuğun numarasını al
+                const seatNumber = parseInt(seat.textContent);
+
+                // Koltuğun rengini değiştir veya geri al
+                if (selectedSeats.includes(seatNumber)) {
+                    // Seçili koltukları geri al
+                    seat.classList.remove(selectedGender.toLowerCase());
+                    selectedSeats = selectedSeats.filter(num => num !== seatNumber);
+                } else if (selectedSeats.length < numPassengers) {
+                    // Yeterli koltuk seçilmediyse ve seçilen koltuk yeni ise rengini değiştir
+                    // ve yan yana oturan farklı cinsiyetteki yolcuları kontrol et
+                    if (!selectedSeats.length || !selectedSeats.find(selectedSeat => Math.abs(selectedSeat - seatNumber) === 1) ||
+                        !selectedSeats.find(selectedSeat => {
+                            const selectedSeatElement = document.querySelector(`.seat:nth-child(${selectedSeat})`);
+                            const selectedSeatGender = selectedSeatElement.classList.contains('Male') ? 'Male' : 'Female';
+                            return selectedSeatGender !== selectedGender.toLowerCase();
+                        })) {
+                        seat.classList.add(selectedGender.toLowerCase());
+                        selectedSeats.push(seatNumber);
+                    }
+                }
+            });
+        });
+    });
+</script>
 
 
-</div>
-            <div class="bus" id="bus">
-                <!-- Otobüs koltukları burada dinamik olarak oluşturulacak -->
-            </div>
-            <div id="seatsContainer" class="mt-3"></div>
-            <div class="mt-3">
-                <label for="numPassengers">Number of Passengers:</label>
-                <input type="number" id="numPassengers" min="1" value="1">
-                <label for="genderSelect" class="ms-3">Gender:</label>
-                <select id="genderSelect">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-                <br>
-                <br>
-                <label for="age">Age:</label>
-                <input type="number" id="age" min="1" value="1">
-                <label for="discountType" class="ms-3">Discount Type:</label>
-                <select id="discountType">
-                    <option value="Child">Child (Under 7)</option>
-                    <option value="Student">Student</option>
-                    <option value="Senior">Senior (65+)</option>
-                    <option value="Employee">Employee</option>
-                    <option value="Security">Security Forces</option>
-                </select>
-                <br><br>
-                <button id="reserveButton" class="btn btn-success mt-1">Reserve Seats</button>
-                <button id="buyButton" class="btn btn-success mt-1">Buy Seats</button>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
+
 
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

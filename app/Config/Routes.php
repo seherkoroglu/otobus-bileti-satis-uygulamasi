@@ -31,7 +31,13 @@ $routes->post('seatController/reserveSeats', 'SeatController::reserveSeats');
 $routes->post('seatController/buySeats', 'SeatController::buySeats');
 $routes->get('seatController/reserveSeats', 'SeatController::reserveSeats');
 $routes->get('seatController/buySeats', 'SeatController::buySeats');
-$routes->get('/odeme', 'OdemeController::index');
+$routes->get('odeme', 'OdemeController::index');
+$routes->post('odeme', 'OdemeController::index');
+$routes->post('odemeController/index', 'OdemeController::index');
+$routes->get('cart', 'OdemeController::cart');
+$routes->post('cart', 'OdemeController::cart');
+$routes->get('payment', 'OdemeController::payment');
+
 
 
 

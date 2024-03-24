@@ -825,3 +825,254 @@ in APPPATH\Views\dashboard\biletBul.php on line 159.
 CRITICAL - 2024-03-23 16:10:01 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
 in APPPATH\Views\dashboard\biletBul.php on line 143.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-23 16:39:16 --> ErrorException: Undefined array key "genderSelect"
+in APPPATH\Views\dashboard\biletBul.php on line 138.
+ 1 APPPATH\Views\dashboard\biletBul.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "genderSelect"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 138)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(33): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 16:40:46 --> ErrorException: Undefined array key "gender"
+in APPPATH\Views\dashboard\biletBul.php on line 153.
+ 1 APPPATH\Views\dashboard\biletBul.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(33): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 16:41:03 --> ErrorException: Undefined array key "genderSelect"
+in APPPATH\Views\dashboard\biletBul.php on line 153.
+ 1 APPPATH\Views\dashboard\biletBul.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "genderSelect"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(33): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 16:42:48 --> ErrorException: Undefined array key "gender"
+in APPPATH\Views\dashboard\biletBul.php on line 153.
+ 1 APPPATH\Views\dashboard\biletBul.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender"', 'C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Busla\\app\\Views\\dashboard\\biletBul.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 5 APPPATH\Controllers\Bilet.php(33): view('dashboard/biletBul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 16:43:16 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 16:43:20 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 17:22:16 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 17:23:07 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 17:23:29 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 17:23:59 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 18:50:02 --> ErrorException: Undefined array key "selected_trip"
+in APPPATH\Controllers\SeatController.php on line 15.
+ 1 APPPATH\Controllers\SeatController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "selected_trip"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 18:50:42 --> ErrorException: Undefined array key "selected_trip"
+in APPPATH\Controllers\SeatController.php on line 15.
+ 1 APPPATH\Controllers\SeatController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "selected_trip"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 18:53:38 --> ErrorException: Undefined global variable $_SESSION
+in APPPATH\Controllers\SeatController.php on line 15.
+ 1 APPPATH\Controllers\SeatController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 18:54:08 --> ErrorException: Undefined array key "selected_trip"
+in APPPATH\Controllers\SeatController.php on line 16.
+ 1 APPPATH\Controllers\SeatController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "selected_trip"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:00:26 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\SeatController.php on line 29.
+ 1 APPPATH\Controllers\SeatController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:00:50 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\SeatController.php on line 29.
+ 1 APPPATH\Controllers\SeatController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:14:20 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\SeatController.php on line 30.
+ 1 APPPATH\Controllers\SeatController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:14:35 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\SeatController.php on line 30.
+ 1 APPPATH\Controllers\SeatController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:17:34 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\SeatController.php on line 30.
+ 1 APPPATH\Controllers\SeatController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:48:02 --> Error: Call to undefined function set_value()
+in APPPATH\Views\dashboard\biletBul.php on line 177.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/biletBul', [], true)
+ 4 APPPATH\Controllers\Bilet.php(33): view('dashboard/biletBul', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:48:25 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:50:45 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:51:48 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\SeatController.php on line 51.
+ 1 APPPATH\Controllers\SeatController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 19:52:14 --> ErrorException: Undefined variable $query
+in APPPATH\Controllers\SeatController.php on line 53.
+ 1 APPPATH\Controllers\SeatController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\SeatController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 20:04:21 --> CodeIgniter\Validation\Exceptions\ValidationException: "required, alpha" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required, alpha')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('tripType', 'tripType', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\SeatController.php(10): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+CRITICAL - 2024-03-23 20:05:36 --> CodeIgniter\Validation\Exceptions\ValidationException: " alpha" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound(' alpha')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('genderPreference', 'genderPreference', 'Male', [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\SeatController.php(10): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SeatController->reserveSeats()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeatController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+INFO - 2024-03-23 20:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-23 20:07:03 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')
+INFO - 2024-03-23 20:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-23 20:07:30 --> ErrorException: Undefined array key "departureTerminalID"
+in APPPATH\Controllers\Bilet.php on line 23.
+ 1 APPPATH\Controllers\Bilet.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "departureTerminalID"', 'C:\\xampp\\htdocs\\Busla\\app\\Controllers\\Bilet.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->biletBul()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Busla\\public\\index.php')

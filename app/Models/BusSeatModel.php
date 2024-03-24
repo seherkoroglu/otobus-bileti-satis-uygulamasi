@@ -4,7 +4,8 @@ use CodeIgniter\Model;
 
 class BusSeatModel extends Model {
     protected $table = 'koltuklar';
-    protected $allowedFields = ['seatID', 'tripID', 'seatNumber', 'isAvailable', 'isReserved','isSold', 'tripType', 'genderPreference', 'age', 'discountType' ];
+    protected $primaryKey = 'seatID';
+    protected $allowedFields = [ 'tripID', 'seatNumber', 'isAvailable', 'isReserved','isSold', 'tripType', 'genderPreference', 'age', 'discountType' ];
     
 }
 

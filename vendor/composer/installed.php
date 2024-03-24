@@ -64,6 +64,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'erkineren/shopier' => array(
+            'pretty_version' => 'v0.2.2',
+            'version' => '0.2.2.0',
+            'reference' => 'bb20fc89af4c3f3c22fd5b163dfac1744905cea8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../erkineren/shopier',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'fakerphp/faker' => array(
             'pretty_version' => 'v1.23.1',
             'version' => '1.23.1.0',
@@ -81,6 +90,15 @@
             'install_path' => __DIR__ . '/../friendsofphp/php-cs-fixer',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'iyzico/iyzipay-php' => array(
+            'pretty_version' => 'v2.0.54',
+            'version' => '2.0.54.0',
+            'reference' => '4a5874a63582e92338662782887da757de62c646',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../iyzico/iyzipay-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'kint-php/kint' => array(
             'pretty_version' => '5.1.0',
