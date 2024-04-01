@@ -1,1 +1,0 @@
-# otobus-bileti-satis-uygulamasi
