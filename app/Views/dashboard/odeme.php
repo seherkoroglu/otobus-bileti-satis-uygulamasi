@@ -12,13 +12,16 @@
             <h2>Payment</h2>
         </div>
         <section>
+        <?php if (session()->get('email')): ?>
+                    <div class="alert alert-info">Giriş yaptığınız email: <?= session()->get('email') ?></div>
+                <?php endif; ?>
             <form id="payment-form">
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-control" required />
+                    <input type="email" id="email" class="form-control" required placeholder="lütfen giriş yaptığınız email adresinizi giriniz." />
                 </div>
                 <div class="form-group">
-                    <label for="amount">Amount (ZAR)</label>
+                    <label for="amount">Fiyat</label>
                     <input type="number" id="amount" class="form-control" required />
                 </div>
                 <div class="form-group">

@@ -4,12 +4,14 @@ namespace App\Controllers;
 
 use App\Models\SeyahatModel;
 use App\Models\TerminallerModel;
+use CodeIgniter\Controller;
 
     class Bilet extends BaseController
     {
         public function biletBul()
         {
             $tripID = $this->request->getPost('tripID'); // Seçilen seyahatin ID'sini al
+
         
             // Trip ID ile seyahat detaylarını çek
             $seyahatModel = new SeyahatModel();

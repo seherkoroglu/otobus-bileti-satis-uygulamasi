@@ -21,6 +21,10 @@ class Auth extends BaseController
     }
 
     public function save(){
+        $email = $this->request->getPost('email');
+        session()->set('email', $email);
+        $username = $this->request->getPost('username');
+        session()->set('username', $username);
        //$validation = $this->validate([
          //  'name' => 'required',
            //'email' => 'required|valid_email|is_unique[users.email]',
@@ -95,7 +99,8 @@ class Auth extends BaseController
 }
 function check(){
     //echo "I am here";
-
+    $email = $this->request->getPost('email');
+    session()->set('email', $email);
     $validation = $this->validate([
         'email' => [
             'rules' => 'required|valid_email|is_not_unique[users.email]',
@@ -138,9 +143,10 @@ function check(){
                 return redirect()->to('/dashboard');
             }
 
-
-
+         
 
 }
+
+
 }
 }

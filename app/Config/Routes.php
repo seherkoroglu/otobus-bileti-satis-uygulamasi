@@ -37,6 +37,8 @@ $routes->post('odemeController/index', 'OdemeController::index');
 $routes->get('cart', 'OdemeController::cart');
 $routes->post('cart', 'OdemeController::cart');
 $routes->get('payment', 'OdemeController::payment');
+$routes->post('cart', 'SeatController::reserveSeats');
+
 
 
 

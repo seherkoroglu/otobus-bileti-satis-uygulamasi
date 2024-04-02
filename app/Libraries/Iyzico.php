@@ -90,6 +90,7 @@ public function setItems(Array $items){
 }
 public function paymentForm(){
     $payment = \Iyzipay\Model\Payment::create($this->request, $this->options);
+    
     return $payment;
 }
 }
